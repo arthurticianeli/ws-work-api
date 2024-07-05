@@ -10,7 +10,6 @@ services:
     volumes:
       - ./src/main/resources:/docker-entrypoint-initdb.d
 
-
   app:
     image: arthurticianeli/ws-work-api:latest
     depends_on:
@@ -21,3 +20,4 @@ services:
       SPRING_DATASOURCE_URL: jdbc:postgresql://database:5432/ws-work-api
       SPRING_DATASOURCE_USERNAME: postgres
       SPRING_DATASOURCE_PASSWORD: postgres
+

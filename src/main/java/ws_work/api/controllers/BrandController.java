@@ -13,7 +13,6 @@ import org.springframework.web.util.UriComponentsBuilder;
 import ws_work.api.domain.dtos.BrandDtoRequest;
 import ws_work.api.domain.dtos.BrandDtoResponse;
 import ws_work.api.domain.dtos.CodigoDescricaoDto;
-import ws_work.api.domain.entities.BrandEntity;
 import ws_work.api.domain.repositories.BrandRepository;
 import ws_work.api.domain.services.BrandService;
 
@@ -49,13 +48,13 @@ public class BrandController {
     @PutMapping
     @Transactional
     public ResponseEntity<BrandDtoResponse> updateBrand(@RequestBody @Valid BrandDtoRequest brandDtoRequest) {
-             return ResponseEntity.ok(brandService.updateBrand(brandDtoRequest));
+        return ResponseEntity.ok(brandService.updateBrand(brandDtoRequest));
     }
 
     @DeleteMapping("/{id}")
     @Transactional
     public ResponseEntity<Void> deleteBrand(@PathVariable Long id) {
-       brandService.deleteBrand(id);
+        brandService.deleteBrand(id);
 
         return ResponseEntity.noContent().build();
     }
