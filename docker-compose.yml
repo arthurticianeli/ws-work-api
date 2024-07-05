@@ -1,0 +1,11 @@
+services:
+  database:
+    image: 'postgres:15.2'
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_DB: ws-work-api
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - ./src/main/resources:/docker-entrypoint-initdb.d

@@ -1,3 +1,4 @@
+
 -- Inserindo marcas mais diversificadas
 INSERT INTO brands (nome_marca) VALUES ('Toyota');
 INSERT INTO brands (nome_marca) VALUES ('Volkswagen');
@@ -43,5 +44,3 @@ INSERT INTO cars (timestamp_cadastro, modelo_id, ano, combustivel, num_portas, c
 -- Adicionando carros para os novos modelos de Volkswagen
 INSERT INTO cars (timestamp_cadastro, modelo_id, ano, combustivel, num_portas, cor) VALUES (CURRENT_TIMESTAMP, (SELECT id FROM models WHERE nome = 'Polo'), 2020, 'Flex', 4, 'Vermelho');
 INSERT INTO cars (timestamp_cadastro, modelo_id, ano, combustivel, num_portas, cor) VALUES (CURRENT_TIMESTAMP, (SELECT id FROM models WHERE nome = 'Tiguan'), 2023, 'Diesel', 4, 'Azul');
-
-INSERT INTO users (login, password) VALUES ('wswork', '$2a$12$9HMQW2IOlnfPmJYU6L7/muq2H/jIhmEKuPDtPowec6iR0ga6lR0vq')
